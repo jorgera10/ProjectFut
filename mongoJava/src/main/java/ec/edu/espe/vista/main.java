@@ -1,5 +1,6 @@
 package ec.edu.espe.vista;
 
+import com.kenwalger.mongoJava.MongoJava;
 import static com.kenwalger.mongoJava.MongoJava.crearConexion;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
@@ -10,11 +11,11 @@ import com.mongodb.MongoClient;
  */
 public class main {
     public static void main(String[] args){
-        MongoClient mongo = crearConexion();
+        //MongoClient mongo = crearConexion();
         
         
         // SI NO EXISTE LA BASE DE DATOS LA CREAMOS
-        if(mongo != null) {
+        /*if(mongo != null) {
             DB db = mongo.getDB("Futbol");
             
             System.out.println("BASE DE DATOS CREADA");
@@ -39,11 +40,12 @@ public class main {
             System.out.println("DESPUES DEL DELETE");
             mostrarColeccion(db, "usuarios");*/
             //MongoJava.insertarUsuario(db, "Equipo",  "2","jorge2", "ecuador");
-        }
-
-
+        //}
         
+        MainV main = new MainV();
+        main.setVisible(true);
     }
+    
     
     
 }

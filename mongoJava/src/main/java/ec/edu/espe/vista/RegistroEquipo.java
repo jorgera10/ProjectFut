@@ -203,7 +203,7 @@ public class RegistroEquipo extends javax.swing.JFrame {
     private void btnRegresarEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarEquipoActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        MainVista main = new MainVista();
+        MainV main = new MainV();
         main.setVisible(true);
     }//GEN-LAST:event_btnRegresarEquipoActionPerformed
 

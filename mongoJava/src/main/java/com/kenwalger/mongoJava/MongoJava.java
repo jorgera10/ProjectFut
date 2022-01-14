@@ -96,7 +96,7 @@ public class MongoJava {
         DBCursor cursor = colec.find();
         
         while(cursor.hasNext()) {
-            ListaEquipos.add(cursor.next().get("ID") + " - " + cursor.curr().get("nombre")); //añadimos cada equipo de la base al array list
+            ListaEquipos.add(cursor.next().get("ID") + " - " + cursor.curr().get("nombre") + "\n"); //añadimos cada equipo de la base al array list
         }
         
         numeroEquipos = ListaEquipos.size();
@@ -110,6 +110,7 @@ public class MongoJava {
     
     
     // MUESTRA TODOS LOS DOCUMENTOS DE LA COLECCION USUARIOS QUE COINCIDAN CON EL NOMBRE
+    
     public static void buscarPorNombre(DB db, String coleccion, String nombre) {
         DBCollection colect = db.getCollection(coleccion);
         
@@ -124,6 +125,36 @@ public class MongoJava {
         }
     }
     
+    //buscar por equipo
+    public static String buscarPorEquipo(DB db, String coleccion, String equipo) {
+        DBCollection colect = db.getCollection(coleccion);
+        
+        // CREAMOS LA CONSULTA CON EL CAMPO NOMBRE
+        BasicDBObject consulta = new BasicDBObject();
+        consulta.put("equipo", equipo);
+        
+        // BUSCA Y MUESTRA TODOS LOS DOCUMENTOS QUE COINCIDAN CON LA CONSULTA
+        DBCursor cursor = colect.find(consulta);
+        while(cursor.hasNext()) {
+            System.out.println(cursor.next().get("nombre"));
+        }
+        return (String) cursor.next().get("nombre");
+    }
+    //buscar por IDCombo
+    public static String buscarPorIdCombo(DB db, String coleccion, int id) {
+        DBCollection colect = db.getCollection(coleccion);
+        
+        // CREAMOS LA CONSULTA CON EL CAMPO NOMBRE
+        BasicDBObject consulta = new BasicDBObject();
+        consulta.put("ID", id);
+        
+        // BUSCA Y MUESTRA TODOS LOS DOCUMENTOS QUE COINCIDAN CON LA CONSULTA
+        DBCursor cursor = colect.find(consulta);
+        while(cursor.hasNext()) {
+            System.out.println(cursor.next().get("nombre"));
+        }
+        return (String) cursor.next().get("nombre");
+    }
     
     // MUESTRA TODOS LOS DOCUMENTOS DE LA COLECCION USUARIOS QUE COINCIDAN CON EL ID
     public static String buscarPorId(DB db, String coleccion, int id) {

@@ -174,7 +174,7 @@ public class RegistarPartida extends javax.swing.JFrame {
     private void btnRegresarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarPartidaActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        MainVista main = new MainVista();
+        MainV main = new MainV();
         main.setVisible(true);
     }//GEN-LAST:event_btnRegresarPartidaActionPerformed
 

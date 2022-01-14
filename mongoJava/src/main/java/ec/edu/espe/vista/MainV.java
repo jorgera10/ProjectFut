@@ -8,12 +8,12 @@ package ec.edu.espe.vista;
  *
  * @author LENOVO
  */
-public class MainVista extends javax.swing.JFrame {
+public class MainV extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainVista
+     * Creates new form MainV
      */
-    public MainVista() {
+    public MainV() {
         initComponents();
     }
 
@@ -32,7 +32,6 @@ public class MainVista extends javax.swing.JFrame {
         btnJugadorMain = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(250, 250));
 
         btnSimuladorMain.setText("Simulador");
         btnSimuladorMain.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +72,7 @@ public class MainVista extends javax.swing.JFrame {
                         .addComponent(btnJugadorMain)
                         .addGap(87, 87, 87)
                         .addComponent(btnSimuladorMain)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,7 +84,7 @@ public class MainVista extends javax.swing.JFrame {
                     .addComponent(btnEquipoMain)
                     .addComponent(btnJugadorMain)
                     .addComponent(btnSimuladorMain))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,7 +107,7 @@ public class MainVista extends javax.swing.JFrame {
     private void btnJugadorMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadorMainActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        RegistrarJugadores registroJugador = new RegistrarJugadores();
+        RegistrarJugador registroJugador = new RegistrarJugador();
         registroJugador.setVisible(true);
     }//GEN-LAST:event_btnJugadorMainActionPerformed
 
@@ -129,20 +128,20 @@ public class MainVista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainVista().setVisible(true);
+                new MainV().setVisible(true);
             }
         });
     }
